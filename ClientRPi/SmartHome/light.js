@@ -1,5 +1,5 @@
 var Gpio = require('onoff').Gpio;
-var lamp = new Gpio(18, 'high');
+var lamp = new Gpio(14, 'high');
 const vars = require('./vars');
 const dash_button = require('node-dash-button');
 var dash = dash_button([vars.AMAZON_DASH_ALERT_MAC, vars.AMAZON_DASH_IOT_MAC], null, null, 'all'); 
