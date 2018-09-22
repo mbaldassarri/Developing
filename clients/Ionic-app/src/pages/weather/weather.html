@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card>
+        <ion-card-header>
+          Header
+        </ion-card-header>
+        <ion-card-content>
+          The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+        </ion-card-content>
+      </ion-card>
+
+
+  <ion-card>
+
+
+      <ion-grid>
+          <ion-row>
+            <ion-col width-50 col-auto>
+                <ion-item>
+                  <ion-icon name="football" item-start large></ion-icon>
+                  <h1>Città</h1>
+                </ion-item>
+              
+                <ion-item>
+                  <ion-icon name="wine" item-left small ></ion-icon>
+                  <h3>Nest Thermostat</h3>
+                </ion-item>
+                <ion-item>
+                    <ion-icon name="wine" item-left small ></ion-icon>
+                    <h3>Stato: </h3><h2>ECO</h2>
+                </ion-item>
+            </ion-col>
+            <ion-col width-50 class="right-card-content">
+              <div class="center-item">
+                <h1 class="">{{nestTemperature}}</h1>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      <ion-item>
+        <span item-left>18 min</span>
+        <span item-left>(2.6 mi)</span>
+        <button ion-button icon-left clear item-end>
+          <ion-icon name="navigate"></ion-icon>
+          Start
+        </button>
+      </ion-item>
+    
+    </ion-card>
+
+</ion-content>

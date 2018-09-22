@@ -1,0 +1,21 @@
+{
+  "name": "Casa",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/",
+      "proxyUrl": "https://developer-api.nest.com/"
+    },
+    {
+      "path": "/",
+      "proxyUrl": "https://app.e-daitem.com/mediator/authenticate/login"
+    },
+    {
+      "path": "/",
+      "proxyUrl": "https://casa-dashboard.herokuapp.com/"
+    }
+  ]
+}

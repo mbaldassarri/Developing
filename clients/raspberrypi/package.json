@@ -1,0 +1,16 @@
+{
+  "name": "casa-dashboard",
+  "version": "1.0.0",
+  "description": "Light ON/OFF",
+  "main": "light.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marco",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^2.18.8",
+    "onoff": "^3.2.1",
+    "url": "^0.11.0"
+  }
+}
