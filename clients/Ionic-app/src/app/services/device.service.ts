@@ -1,30 +1,24 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { Headers, RequestOptions, Http } from '@angular/http';
 
 @Injectable()
 export class DeviceService {
-  private url: string = "https://casa-dashboard.herokuapp.com/light";
-  private params = {
-    status : 'on'
-  };
 
-  constructor(private http: HttpClient) { }
+
+  private headers = new Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
+  private options = new RequestOptions({ headers: this.headers });
+  private url: string = "https://casa-dashboard.herokuapp.com/light";
+  //private url: string = "https://jsonplaceholder.typicode.com/posts";
+  //private url: string = "http://localhost:3000/light";
+
+  constructor(private http: Http) { }
 
   changeLampStatus(): Observable<any> {
-    const headers = new HttpHeaders();
-    headers.set('Content-Type', 'application/json');
-    headers.set('charset', 'UTF-8');
-
-    // const params = new HttpParams();
-    // params.set('status', '0');
-    
-
-   var body = JSON.stringify(this.params);
-   console.log(body)
-
-    return this.http.post(this.url, {headers,body});
+    return this.http.post(this.url, JSON.stringify({
+      status: 'off'
+    }), this.options);
   }
 
 }

@@ -13,10 +13,10 @@ export class Devices {
   }
   
   switchOnLamp(){
-    this.deviceService.changeLampStatus().subscribe(data => {
-      debugger;
-      console.log("data " + data); this.state = data
-    });
+    this.deviceService.changeLampStatus()
+                      .subscribe(data => {
+                              console.log("data " + data); this.state = data
+                      }, error => console.log(error));
   }
 
 }

@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">SmartHome</string>
-    <string name="dialog_ok">Ok</string>
-    <string name="network_unavailable">Unable to turn the lights on. Connection unavailable.</string>
-    <string name="network_unavailable_title">Connection</string>
-</resources>

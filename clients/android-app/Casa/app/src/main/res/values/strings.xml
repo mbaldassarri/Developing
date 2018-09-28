@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Casa</string>
+    <string name="title_home">Smart Home</string>
+    <string name="title_termo">Termo</string>
+    <string name="title_alarm">Allarme</string>
+    <string name="dialog_ok">Ok</string>
+    <string name="network_unavailable">Rete non disponibile...</string>
+    <string name="network_unavailable_title">Connessione</string>
+</resources>

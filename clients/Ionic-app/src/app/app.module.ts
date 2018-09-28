@@ -10,7 +10,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HTTP } from '@ionic-native/http';
 import {AlarmService} from "./services/alarm.service";
 import {HttpClientModule} from "@angular/common/http";
 import { DeviceService } from './services/device.service';
