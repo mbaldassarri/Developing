@@ -6,16 +6,11 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="content">
     <ion-list-header>Follow us on Twitter</ion-list-header>
     <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Gandalf</ion-label>
-      <ion-toggle color="energized" checked="false" (click)="switchOnLamp()"></ion-toggle>
+      <ion-label>Lampada</ion-label>
+      <ion-toggle  [(ngModel)]="lampStatus" color="energized" checked="false" (click)="switchOnLamp()"></ion-toggle>
     </ion-item>
 
     

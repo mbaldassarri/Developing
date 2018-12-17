@@ -7,16 +7,21 @@ import {DeviceService} from "../../app/services/device.service";
   templateUrl: 'devices.html'
 })
 export class Devices {
-  state = 'ON/OFF'
+  lampStatus: boolean = false;
   constructor(public navCtrl: NavController, private deviceService: DeviceService) {
-
+    this.deviceService.getLampStatus().subscribe(res => this.lampStatus = this.parseStatus(res.status));
   }
   
   switchOnLamp(){
-    this.deviceService.changeLampStatus()
-                      .subscribe(data => {
-                              console.log("data " + data); this.state = data
-                      }, error => console.log(error));
+    this.deviceService.changeLampStatus(this.lampStatus)
+                      .subscribe(
+                        res => {
+                                this.lampStatus = this.parseStatus(res.status);
+                              }, 
+                        error => console.log(error));
   }
 
+  private parseStatus(status: string) {
+    return status == '0' ? false : true;
+  }
 }
