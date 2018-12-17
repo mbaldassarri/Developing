@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "mqtt": "^2.18.8",
+    "node-dash-button": "^0.6.1",
     "onoff": "^3.2.1",
     "url": "^0.11.0"
   }
