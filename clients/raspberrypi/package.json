@@ -11,6 +11,9 @@
   "dependencies": {
     "mqtt": "^2.18.8",
     "onoff": "^3.2.1",
+    "raspicam": "^0.2.14",
+    "sftp-upload": "^1.0.0",
+    "ssh2-sftp-client": "^2.4.3",
     "url": "^0.11.0"
   }
 }
