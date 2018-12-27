@@ -1,6 +1,5 @@
 var Gpio = require('onoff').Gpio;
 var lamp = new Gpio(14, 'high');
-
 var mqtt = require('mqtt'), url = require('url');
 var mqtt_url = url.parse("mqtt://zbqlnwjk:bF4CAJfM5AGI@m15.cloudmqtt.com:12505");
 const client = mqtt.connect(mqtt_url)
@@ -17,9 +16,7 @@ var camera = new RaspiCam({
 	timeout: 0 // take the picture immediately
 });
 
-//setInterval(function() {
-  camera.start();
-//}, 5000)
+camera.start();
 
 var options = {
 		host:'192.168.9.100',
@@ -30,7 +27,7 @@ var options = {
 		remoteDir: '/home/marco/smart_home/picam/'
 }
 
-//listen for the "read" event triggered when each new photo/video is saved
+//listen for the "read" event triggered when each new photo is saved
 camera.on("read", function(err, timestamp, filename){
 	var sftp = new SftpUpload(options);
 	sftp.on('error', function(err) {
